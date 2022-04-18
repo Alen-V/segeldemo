@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Project</title>
+    <script src="https://kit.fontawesome.com/78b1d194d7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+    <div id="main">
+        <header class="top-header d-flex">
+            <div class="d-none burger-button">
+                <div id="burgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="nav" class="navbar-container d-flex">
+                <span class="navbar-item">
+                    <a href="#about-us">about us</a>
+                </span>
+                <span class="navbar-item">
+                    <a href="#gallery">gallery</a>
+                </span>
+                <span class="navbar-item">
+                    <a href="#crew">crew</a>
+                </span>
+                <span class="navbar-item">
+                    <a href="#contact">kontakt</a>
+                </span>
+            </div>
+            <div class="logo-container d-flex">
+                <span class="logo"></span>
+            </div>
+        </header>
+        <section id="about-us" class="main-news">
+            <div class="main-news-article d-flex">
+                <div class="text-container d-flex">
+                    <span class="headline-title txt-red">
+                        lorem ipsum proin gravi
+                    </span>
+                    <span>
+                        lorem ipsum proin gravida nibh vel velit auctor aliqet. aenan solicitioin lorem
+                    </span>
+                </div>
+            </div>
+            <div class="news-headline-container d-flex">
+                <div class="news-headline-item d-flex">
+                    <div class="date-container d-flex">
+                        <div class="calendar-icon"></div>
+                        <span id="date">23 mai 2021</span>
+                    </div>
+                    <div class="headline-title txt-red">
+                        <span>news headline</span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="news-headline-item d-flex">
+                    <div class="date-container d-flex">
+                        <div class="calendar-icon"></div>
+                        <span id="date">23 mai 2021</span>
+                    </div>
+                    <div class="headline-title txt-red">
+                        <span>news headline</span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="news-headline-item d-flex calendar">
+                    <div class="date-container">
+                        <span id="date">17 mai</span>
+                    </div>
+                    <div class="headline-title txt-red">
+                        <span>headline beitrag 2021</span>
+                    </div>
+                    <div class="description">
+                        <span class="sub-title">subtitle</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="gallery" class="headline">
+            <div class="title d-flex">
+                <div class="main-title">
+                    <span>headline - lorem ipsum</span>
+                </div>
+                <div class="sub-title">
+                    <span>subtitle lorem ipsum</span>
+                </div>
+            </div>
+            <div class="text-container d-flex">
+                <div class="paragraph text-left">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quo, neque distinctio ducimus voluptates voluptate. Tempora qui harum necessitatibus nobis. Laudantium, cupiditate natus earum doloribus explicabo aliquam ad sed ipsum?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, cumque nam? Eum natus ut voluptatem. Eaque, libero? Minima, id autem. Nemo unde veniam dolorum sequi est hic suscipit vel ducimus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nihil unde quaerat perspiciatis doloremque laboriosam ratione deserunt culpa, illo voluptate laborum eveniet praesentium quis quidem commodi nisi, cupiditate cumque. Suscipit?
+                    </p>
+                </div>
+                <div class="paragraph text-right">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quo, neque distinctio ducimus voluptates voluptate. Tempora qui harum necessitatibus nobis. Laudantium, cupiditate natus earum doloribus explicabo aliquam ad sed ipsum?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, cumque nam? Eum natus ut voluptatem. Eaque, libero? Minima, id autem. Nemo unde veniam dolorum sequi est hic suscipit vel ducimus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nihil unde quaerat perspiciatis doloremque laboriosam ratione deserunt culpa, illo voluptate laborum eveniet praesentium quis quidem commodi nisi, cupiditate cumque. Suscipit?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus veritatis, a autem, dolor eligendi obcaecati sunt ullam repellendus cupiditate doloribus facilis neque consequatur aspernatur dolorem quisquam voluptas? Obcaecati, impedit nostrum.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="crew" class="team-container">
+            <div class="title d-flex">
+                <div class="main-title">
+                    <span>unser team</span>
+                </div>
+                <div class="sub-title">
+                    <span>subtitles von unsere team</span>
+                </div>
+            </div>
+            <div class="filter-container">
+                <span id="all" class="filter-item selected">show all</span>
+                <span id="trim" class="filter-item">trim</span>
+                <span id="tactic" class="filter-item">tactic</span>
+                <span id="helmsman" class="filter-item">helmsman</span>
+            </div>
+            <div id="membersContainer" class="members-container">
+                <div class="loading" id="loading">Loading...</div>
+            </div>
+            <div id="loadMore" class="load-more-btn d-none">
+                <span>Load More</span>
+            </div>
+        </section>
+        <footer id="contact" class="footer-container d-flex">
+            <div class="all-rights">
+                <span>&#169; 2021 Segel-Team. Alle Rechte vorbehalten</span>
+            </div>
+            <div class="social-media">
+                <span class="social-media-icon">
+                    <a href="http://twitter.com/followloop" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </span>
+                <span class="social-media-icon">
+                    <a href="http://facebook.com/followloop" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </span>
+            </div>
+            <div class="about-us d-flex">
+                <span class="about-us-item">impressum</span>
+                <span class="about-us-item">datenshutz</span>
+                <span class="about-us-item">rechtliches</span>
+                <span class="about-us-item">copyright</span>
+            </div>
+        </footer>
+    </div>
+    <div id="newsArticleModal">
+        <div class="modal-body">
+            <div class="logo-container d-flex">
+                <span class="logo"></span>
+            </div>
+            <div class="redirect-container">
+                <div id="closeButton" class="close-button">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="social-media">
+                    <div class="social-media-item">
+                        <a href="http://twitter.com/followloop" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div class="social-media-item">
+                        <a href="http://facebook.com/followloop" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                    <div class="social-media-item">
+                        <a href="http://www.agentur-loop.com" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="news-article">
+                <div class="title">
+                    <div class="date-container d-flex">
+                        <div class="calendar-icon"></div>
+                        <span id="date">17 mai 2021</span>
+                    </div>
+                    <div class="headline-title">
+                        <div class="main-title">newsarticle headline</div>
+                        <div class="sub-title">Lorem, ipsum dolor sit amet</div>
+                    </div>
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est libero laudantium iure labore quo, consectetur dolorem rem ex, quidem eius provident qui incidunt sunt ducimus officia reprehenderit ratione voluptatum itaque? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus ipsam deserunt iste aliquam nulla dolor saepe? Accusantium, cum incidunt aliquid eaque illum iste praesentium dolor, natus ad unde ducimus blanditiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione dignissimos minus quam quidem quibusdam nihil nostrum quae itaque officia magnam quis debitis suscipit atque, obcaecati a. Modi ipsam qui optio.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi pariatur quidem ducimus sint commodi veritatis alias maiores, aspernatur facilis necessitatibus illum? Ullam quasi similique inventore commodi fuga quibusdam eaque distinctio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quo consequuntur voluptatibus perferendis debitis tempore cupiditate, reiciendis facilis ducimus? Eius incidunt sunt dolores voluptatem asperiores ipsam eveniet assumenda cumque temporibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus inventore voluptatibus explicabo, facilis laborum assumenda minima quibusdam veritatis. Nam iste, perferendis consequuntur ratione iure perspiciatis magni sunt eius impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, omnis ratione. Minus beatae eligendi obcaecati quam, dolores voluptates eum culpa temporibus enim sapiente inventore veritatis quidem accusantium unde officia neque!
+                    </p>
+                    <div id="slider" class="container-slider">
+                        <div class="slides d-flex">
+                            <div class="slider-item"></div>
+                            <div class="slider-item"></div>
+                        </div>
+                        <div id="prevBtn" class="btn-slide prev d-none">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+                        <div id="nextBtn" class="btn-slide next">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est libero laudantium iure labore quo, consectetur dolorem rem ex, quidem eius provident qui incidunt sunt ducimus officia reprehenderit ratione voluptatum itaque? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus ipsam deserunt iste aliquam nulla dolor saepe? Accusantium, cum incidunt aliquid eaque illum iste praesentium dolor, natus ad unde ducimus blanditiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione dignissimos minus quam quidem quibusdam nihil nostrum quae itaque officia magnam quis debitis suscipit atque, obcaecati a. Modi ipsam qui optio.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
