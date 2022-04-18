@@ -474,10 +474,6 @@ a {
   position: relative;
 }
 
-#main .team-container .members-container .members-line-container .member-card:last-child .member-image:hover ~ .member-details {
-  left: -100%;
-}
-
 #main .team-container .members-container .members-line-container .member-card .member-image {
   height: 100%;
   width: 100%;
@@ -489,13 +485,21 @@ a {
           filter: grayscale(100%);
 }
 
-#main .team-container .members-container .members-line-container .member-card .member-image:hover {
+#main .team-container .members-container .members-line-container .member-card.last-card .hover-image:hover ~ .member-details, #main .team-container .members-container .members-line-container .member-card.last-card .hover-image .member-image ~ .member-details, #main .team-container .members-container .members-line-container .member-card.last-card.card-open:hover ~ .member-details, #main .team-container .members-container .members-line-container .member-card.last-card.card-open .member-image ~ .member-details {
+  left: -100%;
+}
+
+#main .team-container .members-container .members-line-container .member-card.last-card .member-image ~ .member-details {
+  left: 0%;
+}
+
+#main .team-container .members-container .members-line-container .member-card .hover-image:hover, #main .team-container .members-container .members-line-container .member-card .hover-image .member-image, #main .team-container .members-container .members-line-container .member-card.card-open:hover, #main .team-container .members-container .members-line-container .member-card.card-open .member-image {
   z-index: 4;
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
 }
 
-#main .team-container .members-container .members-line-container .member-card .member-image:hover ~ .member-details {
+#main .team-container .members-container .members-line-container .member-card .hover-image:hover ~ .member-details, #main .team-container .members-container .members-line-container .member-card .hover-image .member-image ~ .member-details, #main .team-container .members-container .members-line-container .member-card.card-open:hover ~ .member-details, #main .team-container .members-container .members-line-container .member-card.card-open .member-image ~ .member-details {
   left: 100%;
   z-index: 3;
 }
@@ -742,6 +746,16 @@ a {
   }
   #main .team-container .title {
     font-size: 1.1em;
+  }
+}
+
+@media (max-width: 375px) {
+  #main .team-container .members-container .members-line-container .member-card.last-card.card-open .member-image ~ .member-details {
+    left: 0%;
+    z-index: 5;
+  }
+  #main .team-container .members-container .members-line-container .member-card.last-card .member-details {
+    left: -100%;
   }
 }
 

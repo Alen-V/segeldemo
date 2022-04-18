@@ -88,8 +88,9 @@ const fetchData = async (url) => {
 const printMembers = (data) => {
     const membersLine = document.createElement('div')
     membersLine.classList.add(...['d-flex', 'members-line-container'])
-    data.forEach(member => {
-        membersLine.append(printMember(member))
+    data.forEach((member, index) => {
+        const lastEl = index + 1 === memory.memberPerLine
+        membersLine.append(printMember(member, lastEl))
     });
     return membersLine
 }
@@ -118,13 +119,31 @@ const loadMembers = async (url) => {
     loader.classList.add('d-none')
 }
 
-const printMember = (member) => {
+const printMember = (member, lastEl = false) => {
     const { name, image } = member
     const card = document.createElement('div')
     card.classList.add('member-card')
+    if (lastEl) {
+        card.classList.add('last-card')
+    }
     setCardProportions(card, memory.proportions)
     const img = document.createElement('div')
     img.classList.add('member-image')
+    if (window.innerWidth >= 1024) {
+        img.classList.add('hover-image')
+    } else {
+        card.addEventListener('click', function() {
+            if (this.classList.contains('card-open')) {
+                this.classList.remove('card-open')
+            } else {
+                const el = document.querySelector('.card-open')
+                if (el) {
+                    el.classList.remove('card-open')
+                }
+                this.classList.add('card-open')
+            }
+        })
+    }
     img.style.backgroundImage = `url(${image})`
     const details = document.createElement('div')
     details.classList.add(...['member-details', 'd-flex'])

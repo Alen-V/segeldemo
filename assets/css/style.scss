@@ -404,15 +404,6 @@ a {
             .members-line-container {
                 .member-card {
                     position: relative;
-                    &:last-child {
-                        .member-image {
-                            &:hover {
-                                &~.member-details {
-                                    left: -100%;
-                                }
-                            }
-                        }
-                    }
                     .member-image {
                         height: 100%;
                         width: 100%;
@@ -421,7 +412,23 @@ a {
                         position: relative;
                         z-index: 2;
                         filter: grayscale(100%);
-                        &:hover {
+                    }
+                    &.last-card {
+                        .hover-image, &.card-open {
+                            &:hover, .member-image {
+                                &~.member-details {
+                                    left: -100%;
+                                }
+                            }
+                        }
+                        .member-image {
+                            &~.member-details {
+                                left: 0%;
+                            }
+                        }
+                    }
+                    .hover-image, &.card-open {
+                        &:hover, .member-image {
                             z-index: 4;
                             filter: grayscale(0%);
                             &~.member-details {
@@ -649,6 +656,29 @@ a {
         .team-container {
             .title {
                 font-size: 1.1em;
+            }
+        }
+    }
+    @media (max-width: 375px) {
+        .team-container {
+            .members-container {
+                .members-line-container {
+                    .member-card {
+                        &.last-card {
+                            &.card-open {
+                                .member-image {
+                                    &~.member-details {
+                                        left: 0%;
+                                        z-index: 5;
+                                    }
+                                }
+                            }
+                            .member-details{
+                                left: -100%;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
