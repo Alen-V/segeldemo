@@ -814,9 +814,28 @@ a {
                 font-size: 2em;
                 cursor: pointer;
             }
+            .close-button {
+                transition: all .225s ease;
+                &:hover {
+                    background-color: #C4132F;
+                    color: #E5EAEE;
+                }
+            }
             .social-media-item {
                 background-color: #000000;
                 color: #FFFFFF;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    width: 100%;
+                    transition: all .225s ease;
+                    &:hover {
+                        color: #000000;
+                        background-color: #FFFFFF;
+                    }
+                }
             }
             .close-button {
                 background-color: $bg_color;
