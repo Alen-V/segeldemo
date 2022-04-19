@@ -82,6 +82,7 @@ a {
     justify-content: center;
     background-color: $accent_color;
     align-items: center;
+    cursor: pointer;
     .logo {
         height: 100%;
         width: 100%;
@@ -562,12 +563,25 @@ a {
             }
         }
         .main-news {
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: color;
+            &-article {
+                color: #E5EAEE;
+                .text-container {
+                    width: 100%;
+                }
+            }
             .news-headline-container {
                 .news-headline-item {
                     &.calendar {
                         padding: 20px;
                     }
                 }
+            }
+        }
+        .headline {
+            .text-container {
+                padding: 25px;
             }
         }
         .footer-container {
@@ -599,7 +613,6 @@ a {
         .main-news {
             &-article {
                 .text-container {
-                    width: 100%;
                     padding: 15px;
                     align-items: center;
                     .headline-title {
@@ -609,7 +622,7 @@ a {
             }
             .news-headline-container {
                 .news-headline-item {
-                    padding: 15px;
+                    padding: 15px 20px;
                 }
             }
             }
@@ -630,10 +643,8 @@ a {
         font-size: 12px;
         .main-news {
             &-article {
-                min-height: 400px;
-                background-color: rgba(0,0,0, .5);
-                color: #E5EAEE;
                 height: calc(95vh - #{$news_height});
+                min-height: 400px;
                 .headline-title {
                     font-size: 2.3em;
                 }
@@ -644,6 +655,7 @@ a {
                 overflow-y: hidden;
                 height: $news_height;
                 .news-headline-item {
+                    padding: 13px;
                     min-width: 60%;
                     &.calendar {
                         min-width: 80%;
@@ -909,8 +921,8 @@ a {
         font-size: 12px;
         .modal-body {
             .news-article {
-                margin: 0 15px;
-                padding: 83px 15px;
+                margin: 0 13px;
+                padding: 83px 13px;
                 #slider {
                     .slides {
                         .slider-item {

@@ -16,6 +16,7 @@ const slides = document.querySelector('.slides')
 const slideItem = document.querySelector('.slider-item')
 const closeButton = document.getElementById('closeButton')
 const navItems = document.querySelectorAll('.navbar-item')
+const logoBtn = document.querySelectorAll('.logo-container')
 
 const memory = {
     data: {},
@@ -275,6 +276,8 @@ window.addEventListener('orientationchange', function() {
 navItems.forEach(navItem => {
     navItem.addEventListener('click', () => memory.menuOpen && closeMobMenu())
 })
+
+logoBtn.forEach(btn => btn.addEventListener('click', () => location.reload()))
 
 let xDown = null;                                                        
 let yDown = null;
