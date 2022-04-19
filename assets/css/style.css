@@ -253,7 +253,7 @@ a {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 10;
 }
 
 #main .top-header .navbar-container {
@@ -453,6 +453,7 @@ a {
   padding-bottom: 15px;
   overflow: hidden;
   position: relative;
+  z-index: 3;
 }
 
 #main .team-container .members-container .loading {
@@ -537,15 +538,25 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1rem 0;
+  width: 130px;
+  margin: 1rem auto;
+  text-align: center;
 }
 
 #main .team-container .load-more-btn > span {
+  width: 100%;
   padding: 10px;
   font-weight: 700;
   cursor: pointer;
   border-radius: 3px;
   border: 1px solid;
+  -webkit-transition: all .225s ease;
+  transition: all .225s ease;
+}
+
+#main .team-container .load-more-btn > span:hover {
+  background-color: #BBBBBB;
+  color: #000000;
 }
 
 #main .footer-container {
@@ -629,8 +640,8 @@ a {
     color: #e5eaee;
     padding-top: 83px;
     height: 100%;
-    left: -70%;
-    width: 70%;
+    left: -265px;
+    width: 265px;
     z-index: 1;
     -webkit-transition: all .225s ease;
     transition: all .225s ease;
@@ -761,7 +772,7 @@ a {
 
 #newsArticleModal {
   position: absolute;
-  z-index: 4;
+  z-index: 15;
   top: 0%;
   left: 0;
   -webkit-transition: all .225s ease;
@@ -944,7 +955,9 @@ a {
   }
   #newsArticleModal .news-article #slider .slides .slider-item {
     height: 360px;
-    background-size: cover;
+    background-size: 95%;
+    background-repeat: no-repeat;
+    margin-right: 0;
   }
   #newsArticleModal .news-article #slider .btn-slide {
     background-color: #E5EAEE;
@@ -955,9 +968,6 @@ a {
   #newsArticleModal .modal-body .news-article {
     margin: 0 25px;
     padding: 83px 20px;
-  }
-  #newsArticleModal .modal-body .news-article #slider .slides .slider-item {
-    min-width: 85%;
   }
   #newsArticleModal .modal-body .news-article #slider .btn-slide#prevBtn {
     left: 0%;

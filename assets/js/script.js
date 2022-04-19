@@ -42,9 +42,6 @@ function calculatePageProportions() {
     if (width >= 1024) {
         burgerBtn.classList.add('d-none')
     } else {
-        if (width < 375) memory.slideValue = 77
-        else if (width <= 425) memory.slideValue = 76
-        else if (width <= 768) memory.slideValue = 74
         burgerBtn.classList.remove('d-none')
     }
     if (width >= 992) divide = 5
@@ -117,6 +114,7 @@ const loadMembers = async (url) => {
         loadMore.classList.add('d-none')
     }
     loader.classList.add('d-none')
+    membersContainer.style.height = `unset`
 }
 
 const printMember = (member, lastEl = false) => {
@@ -161,7 +159,6 @@ loadMembers(url);
 
 const loadMoreMembers = () => {
     const { current_page, total_pages } = memory.pagination
-    membersContainer.style.height = `unset`
     if (current_page < total_pages) {
         memory.params.page = current_page+1
         const url = checkParams()
